@@ -1,4 +1,4 @@
-# Module service-principal
+# Module Azure Active Directory Service Principal
 
 Module for managing a service principal for Azure Active Directory with the following characteristics:
 
@@ -18,7 +18,7 @@ module "resource_group" {
 
   resource_tags          = {
     environment = "test-environment"
-  } 
+  }
 }
 
 module "service_principal" {
@@ -62,4 +62,5 @@ module "service_principal" {
 | client\_secret | The password of the generated service principal. This is only exported when create\_for\_rbac is true. |
 | id | The ID of the Azure AD Service Principal |
 | name | The Display Name of the Azure AD Application associated with this Service Principal |
+
 <!--- END_TF_DOCS --->

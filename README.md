@@ -62,5 +62,4 @@ module "service_principal" {
 | client\_secret | The password of the generated service principal. This is only exported when create\_for\_rbac is true. |
 | id | The ID of the Azure AD Service Principal |
 | name | The Display Name of the Azure AD Application associated with this Service Principal |
-
 <!--- END_TF_DOCS --->

@@ -32,14 +32,6 @@ module "service_principal" {
 ```
 
 <!--- BEGIN_TF_DOCS --->
-## Requirements
-
-| Name | Version |
-|------|---------|
-| terraform | >= 0.14.10 |
-| azuread | >= 2.13.0 |
-| random | 3.1.0 |
-
 ## Providers
 
 | Name | Version |
@@ -51,7 +43,7 @@ module "service_principal" {
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+|------|-------------|------|---------|:-----:|
 | api\_permissions | List of API permissions. | `any` | `[]` | no |
 | create\_for\_rbac | Create a new Service Principle | `bool` | `true` | no |
 | end\_date | The relative duration or RFC3339 date after which the password expire. | `string` | `"2Y"` | no |
@@ -70,5 +62,4 @@ module "service_principal" {
 | client\_secret | The password of the generated service principal. This is only exported when create\_for\_rbac is true. |
 | id | The ID of the Azure AD Service Principal |
 | name | The Display Name of the Azure AD Application associated with this Service Principal |
-
 <!--- END_TF_DOCS --->

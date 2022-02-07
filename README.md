@@ -11,7 +11,7 @@ Module for managing a service principal for Azure Active Directory with the foll
 
 ```
 module "resource_group" {
-  source = "github.com/danielscholl/iac-terraform/modules/resource-group"
+  source = "git::https://github.com/danielscholl-terraform/module-resource-group?ref=v1.0.0"
 
   name     = "iac-terraform"
   location = "eastus2"
@@ -22,7 +22,7 @@ module "resource_group" {
 }
 
 module "service_principal" {
-  source = "github.com/danielscholl/iac-terraform/modules/service-principal"
+  source = "git::https://github.com/danielscholl-terraform/module-service-principal?ref=v1.0.0"
 
   name = format("iac-terraform-%s", module.resource_group.random)
   role = "Contributor"
